@@ -1,10 +1,18 @@
 import os
+import streamlit as st
 from langchain_groq import ChatGroq
 from dotenv import load_dotenv
 load_dotenv()
 
+if "Grok_API_KEY" in st.secrets:
+    groq_api_key = st.secrets("Grok_API_KEY")
+else:
+     groq_api_key = os.getenv("Grok_API_KEY")    
+
+
+
 llm = ChatGroq(
-    api_key=os.getenv("Grok_API_KEY"),
+    api_key=groq_api_key,
     model_name= "meta-llama/llama-4-scout-17b-16e-instruct"
 )
 
