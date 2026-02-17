@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 if "Grok_API_KEY" in st.secrets:
-    groq_api_key = st.secrets("Grok_API_KEY")
+    groq_api_key = st.secrets["Grok_API_KEY"]
 else:
      groq_api_key = os.getenv("Grok_API_KEY")    
 
