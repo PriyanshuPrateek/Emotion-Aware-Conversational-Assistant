@@ -158,12 +158,11 @@ with col2:
 st.divider()
 col1, col2, col3 = st.columns(3)
 
-# Show Analysis
+
 with col1:
     if st.button("📊 Show Emotion Analysis"):
         st.session_state.show_analysis = True
 
-# Hide Analysis
 with col2:
     if st.button("🙈 Hide Emotion Analysis"):
         st.session_state.show_analysis = False
