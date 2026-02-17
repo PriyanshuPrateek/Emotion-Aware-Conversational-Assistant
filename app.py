@@ -153,6 +153,30 @@ with col2:
         st.session_state.show_analysis = False
 
 
+# Analysis and Control Buttons
+
+st.divider()
+col1, col2, col3 = st.columns(3)
+
+# Show Analysis
+with col1:
+    if st.button("📊 Show Emotion Analysis"):
+        st.session_state.show_analysis = True
+
+# Hide Analysis
+with col2:
+    if st.button("🙈 Hide Emotion Analysis"):
+        st.session_state.show_analysis = False
+
+# Clear Chat
+with col3:
+    if st.button("🗑️ Clear Chat"):
+
+        st.session_state.chat_history = []
+        st.session_state.emotion_history = []
+        st.session_state.show_analysis = False
+
+        st.rerun()
 
 # Display Emotion Analysis
 
