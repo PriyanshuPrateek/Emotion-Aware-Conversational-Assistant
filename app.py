@@ -137,22 +137,6 @@ for message in st.session_state.chat_history:
             st.write(message["content"])
 
 
-
-# Analysis Toggle Buttons
-
-st.divider()
-
-col1, col2 = st.columns(2)
-
-with col1:
-    if st.button("Show Emotion Analysis"):
-        st.session_state.show_analysis = True
-
-with col2:
-    if st.button("Hide Emotion Analysis"):
-        st.session_state.show_analysis = False
-
-
 # Analysis and Control Buttons
 
 st.divider()
