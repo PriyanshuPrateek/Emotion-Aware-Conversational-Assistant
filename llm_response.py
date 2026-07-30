@@ -12,7 +12,7 @@ else:
 
 llm = ChatGroq(
     api_key=groq_api_key,
-    model_name= "llama-3.3-70b-versatile"
+    model_name= "openai/gpt-oss-20b"
 )
 
 def generate_support_response(text, emotion_result):
